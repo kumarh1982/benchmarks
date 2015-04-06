@@ -12,4 +12,4 @@ for my blog articles on www.nativecoding.wordpress.com.
 
 2. C++11 STD Atomics vs Mutexes : https://nativecoding.wordpress.com/2015/02/15/transition-to-c11-the-most-important-features/
 
-3. EA STL vs GNU LibStdC++ : https://nativecoding.wordpress.com/2015/03/30/electronic-arts-stl-benchmark-vs-libstdc/
+3. EA STL vs Microsoft STL : https://nativecoding.wordpress.com/2015/03/30/electronic-arts-stl-benchmark-vs-msstl/
