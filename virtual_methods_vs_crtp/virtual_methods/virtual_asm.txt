@@ -1,0 +1,593 @@
+
+virtual:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000400930 <_init>:
+_init():
+  400930:	48 83 ec 08          	sub    $0x8,%rsp
+  400934:	48 8b 05 bd 16 20 00 	mov    0x2016bd(%rip),%rax        # 601ff8 <_DYNAMIC+0x200>
+  40093b:	48 85 c0             	test   %rax,%rax
+  40093e:	74 05                	je     400945 <_init+0x15>
+  400940:	e8 1b 00 00 00       	callq  400960 <__gmon_start__@plt>
+  400945:	48 83 c4 08          	add    $0x8,%rsp
+  400949:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000400950 <__gmon_start__@plt-0x10>:
+  400950:	ff 35 b2 16 20 00    	pushq  0x2016b2(%rip)        # 602008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  400956:	ff 25 b4 16 20 00    	jmpq   *0x2016b4(%rip)        # 602010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  40095c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400960 <__gmon_start__@plt>:
+  400960:	ff 25 b2 16 20 00    	jmpq   *0x2016b2(%rip)        # 602018 <_GLOBAL_OFFSET_TABLE_+0x18>
+  400966:	68 00 00 00 00       	pushq  $0x0
+  40096b:	e9 e0 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400970 <_ZNSs4_Rep10_M_disposeERKSaIcE@plt>:
+  400970:	ff 25 aa 16 20 00    	jmpq   *0x2016aa(%rip)        # 602020 <_GLOBAL_OFFSET_TABLE_+0x20>
+  400976:	68 01 00 00 00       	pushq  $0x1
+  40097b:	e9 d0 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400980 <_ZNSt8ios_base4InitC1Ev@plt>:
+  400980:	ff 25 a2 16 20 00    	jmpq   *0x2016a2(%rip)        # 602028 <_GLOBAL_OFFSET_TABLE_+0x28>
+  400986:	68 02 00 00 00       	pushq  $0x2
+  40098b:	e9 c0 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400990 <__libc_start_main@plt>:
+  400990:	ff 25 9a 16 20 00    	jmpq   *0x20169a(%rip)        # 602030 <_GLOBAL_OFFSET_TABLE_+0x30>
+  400996:	68 03 00 00 00       	pushq  $0x3
+  40099b:	e9 b0 ff ff ff       	jmpq   400950 <_init+0x20>
+
+00000000004009a0 <_ZSt24__throw_invalid_argumentPKc@plt>:
+  4009a0:	ff 25 92 16 20 00    	jmpq   *0x201692(%rip)        # 602038 <_GLOBAL_OFFSET_TABLE_+0x38>
+  4009a6:	68 04 00 00 00       	pushq  $0x4
+  4009ab:	e9 a0 ff ff ff       	jmpq   400950 <_init+0x20>
+
+00000000004009b0 <__cxa_atexit@plt>:
+  4009b0:	ff 25 8a 16 20 00    	jmpq   *0x20168a(%rip)        # 602040 <_GLOBAL_OFFSET_TABLE_+0x40>
+  4009b6:	68 05 00 00 00       	pushq  $0x5
+  4009bb:	e9 90 ff ff ff       	jmpq   400950 <_init+0x20>
+
+00000000004009c0 <_ZSt20__throw_out_of_rangePKc@plt>:
+  4009c0:	ff 25 82 16 20 00    	jmpq   *0x201682(%rip)        # 602048 <_GLOBAL_OFFSET_TABLE_+0x48>
+  4009c6:	68 06 00 00 00       	pushq  $0x6
+  4009cb:	e9 80 ff ff ff       	jmpq   400950 <_init+0x20>
+
+00000000004009d0 <_ZNSt8ios_base4InitD1Ev@plt>:
+  4009d0:	ff 25 7a 16 20 00    	jmpq   *0x20167a(%rip)        # 602050 <_GLOBAL_OFFSET_TABLE_+0x50>
+  4009d6:	68 07 00 00 00       	pushq  $0x7
+  4009db:	e9 70 ff ff ff       	jmpq   400950 <_init+0x20>
+
+00000000004009e0 <_ZNSsC1EPKcRKSaIcE@plt>:
+  4009e0:	ff 25 72 16 20 00    	jmpq   *0x201672(%rip)        # 602058 <_GLOBAL_OFFSET_TABLE_+0x58>
+  4009e6:	68 08 00 00 00       	pushq  $0x8
+  4009eb:	e9 60 ff ff ff       	jmpq   400950 <_init+0x20>
+
+00000000004009f0 <strtol@plt>:
+  4009f0:	ff 25 6a 16 20 00    	jmpq   *0x20166a(%rip)        # 602060 <_GLOBAL_OFFSET_TABLE_+0x60>
+  4009f6:	68 09 00 00 00       	pushq  $0x9
+  4009fb:	e9 50 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400a00 <__cxa_pure_virtual@plt>:
+  400a00:	ff 25 62 16 20 00    	jmpq   *0x201662(%rip)        # 602068 <_GLOBAL_OFFSET_TABLE_+0x68>
+  400a06:	68 0a 00 00 00       	pushq  $0xa
+  400a0b:	e9 40 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400a10 <__errno_location@plt>:
+  400a10:	ff 25 5a 16 20 00    	jmpq   *0x20165a(%rip)        # 602070 <_GLOBAL_OFFSET_TABLE_+0x70>
+  400a16:	68 0b 00 00 00       	pushq  $0xb
+  400a1b:	e9 30 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400a20 <__gxx_personality_v0@plt>:
+  400a20:	ff 25 52 16 20 00    	jmpq   *0x201652(%rip)        # 602078 <_GLOBAL_OFFSET_TABLE_+0x78>
+  400a26:	68 0c 00 00 00       	pushq  $0xc
+  400a2b:	e9 20 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400a30 <_Znwm@plt>:
+  400a30:	ff 25 4a 16 20 00    	jmpq   *0x20164a(%rip)        # 602080 <_GLOBAL_OFFSET_TABLE_+0x80>
+  400a36:	68 0d 00 00 00       	pushq  $0xd
+  400a3b:	e9 10 ff ff ff       	jmpq   400950 <_init+0x20>
+
+0000000000400a40 <_Unwind_Resume@plt>:
+  400a40:	ff 25 42 16 20 00    	jmpq   *0x201642(%rip)        # 602088 <_GLOBAL_OFFSET_TABLE_+0x88>
+  400a46:	68 0e 00 00 00       	pushq  $0xe
+  400a4b:	e9 00 ff ff ff       	jmpq   400950 <_init+0x20>
+
+Disassembly of section .text:
+
+0000000000400a50 <main>:
+main():
+/projects/virtual/virtual.cpp:35
+	}
+}
+
+int main (int argc, char** argv)
+{
+	if( argc < 2 ) return -1;
+  400a50:	83 ff 01             	cmp    $0x1,%edi
+  400a53:	0f 8e 88 00 00 00    	jle    400ae1 <main+0x91>
+/projects/virtual/virtual.cpp:34
+		}
+	}
+}
+
+int main (int argc, char** argv)
+{
+  400a59:	41 54                	push   %r12
+  400a5b:	55                   	push   %rbp
+  400a5c:	53                   	push   %rbx
+  400a5d:	48 83 ec 30          	sub    $0x30,%rsp
+/projects/virtual/virtual.cpp:37
+	if( argc < 2 ) return -1;
+	
+	int test_run = stoi ( string(argv[1]) );
+  400a61:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+  400a65:	48 8d 54 24 0e       	lea    0xe(%rsp),%rdx
+  400a6a:	48 8d 7c 24 10       	lea    0x10(%rsp),%rdi
+  400a6f:	e8 6c ff ff ff       	callq  4009e0 <_ZNSsC1EPKcRKSaIcE@plt>
+_ZNKSs7_M_dataEv():
+/usr/include/c++/4.8.2/bits/basic_string.h:293
+      // Data Members (private):
+      mutable _Alloc_hider	_M_dataplus;
+
+      _CharT*
+      _M_data() const
+      { return  _M_dataplus._M_p; }
+  400a74:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+__stoa<long int, int, char, int>():
+/usr/include/c++/4.8.2/ext/string_conversions.h:61
+	   _Base... __base)
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+  400a79:	e8 92 ff ff ff       	callq  400a10 <__errno_location@plt>
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  400a7e:	48 8d 74 24 20       	lea    0x20(%rsp),%rsi
+/usr/include/c++/4.8.2/ext/string_conversions.h:61
+	   _Base... __base)
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+  400a83:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  400a89:	ba 0a 00 00 00       	mov    $0xa,%edx
+  400a8e:	48 89 df             	mov    %rbx,%rdi
+/usr/include/c++/4.8.2/ext/string_conversions.h:61
+	   _Base... __base)
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+  400a91:	48 89 c5             	mov    %rax,%rbp
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  400a94:	e8 57 ff ff ff       	callq  4009f0 <strtol@plt>
+/usr/include/c++/4.8.2/ext/string_conversions.h:64
+
+      if (__endptr == __str)
+  400a99:	48 3b 5c 24 20       	cmp    0x20(%rsp),%rbx
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  400a9e:	49 89 c4             	mov    %rax,%r12
+/usr/include/c++/4.8.2/ext/string_conversions.h:64
+
+      if (__endptr == __str)
+  400aa1:	74 6a                	je     400b0d <main+0xbd>
+/usr/include/c++/4.8.2/ext/string_conversions.h:66
+	std::__throw_invalid_argument(__name);
+      else if (errno == ERANGE
+  400aa3:	83 7d 00 22          	cmpl   $0x22,0x0(%rbp)
+  400aa7:	74 3c                	je     400ae5 <main+0x95>
+  400aa9:	ba 00 00 00 80       	mov    $0x80000000,%edx
+  400aae:	48 01 c2             	add    %rax,%rdx
+  400ab1:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  400ab6:	48 39 c2             	cmp    %rax,%rdx
+  400ab9:	77 2a                	ja     400ae5 <main+0x95>
+~basic_string():
+/usr/include/c++/4.8.2/bits/basic_string.h:539
+
+      /**
+       *  @brief  Destroy the string instance.
+       */
+      ~basic_string() _GLIBCXX_NOEXCEPT
+      { _M_rep()->_M_dispose(this->get_allocator()); }
+  400abb:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  400ac0:	48 8d 74 24 20       	lea    0x20(%rsp),%rsi
+  400ac5:	48 8d 78 e8          	lea    -0x18(%rax),%rdi
+  400ac9:	e8 a2 fe ff ff       	callq  400970 <_ZNSs4_Rep10_M_disposeERKSaIcE@plt>
+main():
+/projects/virtual/virtual.cpp:39
+	
+	test_virtual_methods(test_run);
+  400ace:	44 89 e7             	mov    %r12d,%edi
+  400ad1:	e8 6a 01 00 00       	callq  400c40 <_Z20test_virtual_methodsi>
+/projects/virtual/virtual.cpp:42
+	
+	return 0;
+  400ad6:	48 83 c4 30          	add    $0x30,%rsp
+/projects/virtual/virtual.cpp:41
+	
+	int test_run = stoi ( string(argv[1]) );
+	
+	test_virtual_methods(test_run);
+	
+	return 0;
+  400ada:	31 c0                	xor    %eax,%eax
+/projects/virtual/virtual.cpp:42
+  400adc:	5b                   	pop    %rbx
+  400add:	5d                   	pop    %rbp
+  400ade:	41 5c                	pop    %r12
+  400ae0:	c3                   	retq   
+/projects/virtual/virtual.cpp:35
+	}
+}
+
+int main (int argc, char** argv)
+{
+	if( argc < 2 ) return -1;
+  400ae1:	83 c8 ff             	or     $0xffffffff,%eax
+/projects/virtual/virtual.cpp:42
+	int test_run = stoi ( string(argv[1]) );
+	
+	test_virtual_methods(test_run);
+	
+	return 0;
+  400ae4:	c3                   	retq   
+stoi():
+/usr/include/c++/4.8.2/ext/string_conversions.h:70
+	       || (std::__are_same<_Ret, int>::__value
+		   && (__tmp < __numeric_traits<int>::__min
+		       || __tmp > __numeric_traits<int>::__max)))
+	std::__throw_out_of_range(__name);
+  400ae5:	bf 50 0d 40 00       	mov    $0x400d50,%edi
+  400aea:	e8 d1 fe ff ff       	callq  4009c0 <_ZSt20__throw_out_of_rangePKc@plt>
+  400aef:	48 89 c3             	mov    %rax,%rbx
+~basic_string():
+/usr/include/c++/4.8.2/bits/basic_string.h:539
+  400af2:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  400af7:	48 8d 74 24 0f       	lea    0xf(%rsp),%rsi
+  400afc:	48 8d 78 e8          	lea    -0x18(%rax),%rdi
+  400b00:	e8 6b fe ff ff       	callq  400970 <_ZNSs4_Rep10_M_disposeERKSaIcE@plt>
+  400b05:	48 89 df             	mov    %rbx,%rdi
+  400b08:	e8 33 ff ff ff       	callq  400a40 <_Unwind_Resume@plt>
+stoi():
+/usr/include/c++/4.8.2/ext/string_conversions.h:65
+      _CharT* __endptr;
+      errno = 0;
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+
+      if (__endptr == __str)
+	std::__throw_invalid_argument(__name);
+  400b0d:	bf 50 0d 40 00       	mov    $0x400d50,%edi
+  400b12:	e8 89 fe ff ff       	callq  4009a0 <_ZSt24__throw_invalid_argumentPKc@plt>
+main():
+  400b17:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  400b1e:	00 00 
+
+0000000000400b20 <_GLOBAL__sub_I__Z20test_virtual_methodsi>:
+_GLOBAL__sub_I__Z20test_virtual_methodsi():
+/projects/virtual/virtual.cpp:42
+  400b20:	48 83 ec 08          	sub    $0x8,%rsp
+__static_initialization_and_destruction_0():
+/usr/include/c++/4.8.2/iostream:74
+  extern wostream wclog;	/// Linked to standard error (buffered)
+#endif
+  //@}
+
+  // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  static ios_base::Init __ioinit;
+  400b24:	bf 5c 21 60 00       	mov    $0x60215c,%edi
+  400b29:	e8 52 fe ff ff       	callq  400980 <_ZNSt8ios_base4InitC1Ev@plt>
+  400b2e:	ba 48 0d 40 00       	mov    $0x400d48,%edx
+  400b33:	be 5c 21 60 00       	mov    $0x60215c,%esi
+  400b38:	bf d0 09 40 00       	mov    $0x4009d0,%edi
+_GLOBAL__sub_I__Z20test_virtual_methodsi():
+/projects/virtual/virtual.cpp:42
+  400b3d:	48 83 c4 08          	add    $0x8,%rsp
+__static_initialization_and_destruction_0():
+/usr/include/c++/4.8.2/iostream:74
+  400b41:	e9 6a fe ff ff       	jmpq   4009b0 <__cxa_atexit@plt>
+_GLOBAL__sub_I__Z20test_virtual_methodsi():
+  400b46:	66 90                	xchg   %ax,%ax
+
+0000000000400b48 <_start>:
+_start():
+  400b48:	31 ed                	xor    %ebp,%ebp
+  400b4a:	49 89 d1             	mov    %rdx,%r9
+  400b4d:	5e                   	pop    %rsi
+  400b4e:	48 89 e2             	mov    %rsp,%rdx
+  400b51:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  400b55:	50                   	push   %rax
+  400b56:	54                   	push   %rsp
+  400b57:	49 c7 c0 30 0d 40 00 	mov    $0x400d30,%r8
+  400b5e:	48 c7 c1 c0 0c 40 00 	mov    $0x400cc0,%rcx
+  400b65:	48 c7 c7 50 0a 40 00 	mov    $0x400a50,%rdi
+  400b6c:	e8 1f fe ff ff       	callq  400990 <__libc_start_main@plt>
+  400b71:	f4                   	hlt    
+  400b72:	66 90                	xchg   %ax,%ax
+  400b74:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400b7b:	00 00 00 
+  400b7e:	66 90                	xchg   %ax,%ax
+
+0000000000400b80 <deregister_tm_clones>:
+deregister_tm_clones():
+  400b80:	b8 9f 20 60 00       	mov    $0x60209f,%eax
+  400b85:	55                   	push   %rbp
+  400b86:	48 2d 98 20 60 00    	sub    $0x602098,%rax
+  400b8c:	48 83 f8 0e          	cmp    $0xe,%rax
+  400b90:	48 89 e5             	mov    %rsp,%rbp
+  400b93:	77 02                	ja     400b97 <deregister_tm_clones+0x17>
+  400b95:	5d                   	pop    %rbp
+  400b96:	c3                   	retq   
+  400b97:	b8 00 00 00 00       	mov    $0x0,%eax
+  400b9c:	48 85 c0             	test   %rax,%rax
+  400b9f:	74 f4                	je     400b95 <deregister_tm_clones+0x15>
+  400ba1:	5d                   	pop    %rbp
+  400ba2:	bf 98 20 60 00       	mov    $0x602098,%edi
+  400ba7:	ff e0                	jmpq   *%rax
+  400ba9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000400bb0 <register_tm_clones>:
+register_tm_clones():
+  400bb0:	b8 98 20 60 00       	mov    $0x602098,%eax
+  400bb5:	55                   	push   %rbp
+  400bb6:	48 2d 98 20 60 00    	sub    $0x602098,%rax
+  400bbc:	48 c1 f8 03          	sar    $0x3,%rax
+  400bc0:	48 89 e5             	mov    %rsp,%rbp
+  400bc3:	48 89 c2             	mov    %rax,%rdx
+  400bc6:	48 c1 ea 3f          	shr    $0x3f,%rdx
+  400bca:	48 01 d0             	add    %rdx,%rax
+  400bcd:	48 d1 f8             	sar    %rax
+  400bd0:	75 02                	jne    400bd4 <register_tm_clones+0x24>
+  400bd2:	5d                   	pop    %rbp
+  400bd3:	c3                   	retq   
+  400bd4:	ba 00 00 00 00       	mov    $0x0,%edx
+  400bd9:	48 85 d2             	test   %rdx,%rdx
+  400bdc:	74 f4                	je     400bd2 <register_tm_clones+0x22>
+  400bde:	5d                   	pop    %rbp
+  400bdf:	48 89 c6             	mov    %rax,%rsi
+  400be2:	bf 98 20 60 00       	mov    $0x602098,%edi
+  400be7:	ff e2                	jmpq   *%rdx
+  400be9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000400bf0 <__do_global_dtors_aux>:
+__do_global_dtors_aux():
+  400bf0:	80 3d 61 15 20 00 00 	cmpb   $0x0,0x201561(%rip)        # 602158 <completed.6337>
+  400bf7:	75 11                	jne    400c0a <__do_global_dtors_aux+0x1a>
+  400bf9:	55                   	push   %rbp
+  400bfa:	48 89 e5             	mov    %rsp,%rbp
+  400bfd:	e8 7e ff ff ff       	callq  400b80 <deregister_tm_clones>
+  400c02:	5d                   	pop    %rbp
+  400c03:	c6 05 4e 15 20 00 01 	movb   $0x1,0x20154e(%rip)        # 602158 <completed.6337>
+  400c0a:	f3 c3                	repz retq 
+  400c0c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400c10 <frame_dummy>:
+frame_dummy():
+  400c10:	48 83 3d d8 11 20 00 	cmpq   $0x0,0x2011d8(%rip)        # 601df0 <__JCR_END__>
+  400c17:	00 
+  400c18:	74 1e                	je     400c38 <frame_dummy+0x28>
+  400c1a:	b8 00 00 00 00       	mov    $0x0,%eax
+  400c1f:	48 85 c0             	test   %rax,%rax
+  400c22:	74 14                	je     400c38 <frame_dummy+0x28>
+  400c24:	55                   	push   %rbp
+  400c25:	bf f0 1d 60 00       	mov    $0x601df0,%edi
+  400c2a:	48 89 e5             	mov    %rsp,%rbp
+  400c2d:	ff d0                	callq  *%rax
+  400c2f:	5d                   	pop    %rbp
+  400c30:	e9 7b ff ff ff       	jmpq   400bb0 <register_tm_clones>
+  400c35:	0f 1f 00             	nopl   (%rax)
+  400c38:	e9 73 ff ff ff       	jmpq   400bb0 <register_tm_clones>
+  400c3d:	0f 1f 00             	nopl   (%rax)
+
+0000000000400c40 <_Z20test_virtual_methodsi>:
+_Z20test_virtual_methodsi():
+/projects/virtual/virtual.cpp:21
+		VirtualDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_virtual_methods (int test_run)
+{
+  400c40:	41 55                	push   %r13
+  400c42:	41 54                	push   %r12
+  400c44:	41 89 fc             	mov    %edi,%r12d
+/projects/virtual/virtual.cpp:22
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+  400c47:	bf 10 00 00 00       	mov    $0x10,%edi
+/projects/virtual/virtual.cpp:21
+		VirtualDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_virtual_methods (int test_run)
+{
+  400c4c:	55                   	push   %rbp
+  400c4d:	53                   	push   %rbx
+  400c4e:	48 83 ec 08          	sub    $0x8,%rsp
+/projects/virtual/virtual.cpp:22
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+  400c52:	e8 d9 fd ff ff       	callq  400a30 <_Znwm@plt>
+/projects/virtual/virtual.cpp:23
+	for( int i = 0 ; i < test_run; i++ )
+  400c57:	45 85 e4             	test   %r12d,%r12d
+/projects/virtual/virtual.cpp:22
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_virtual_methods (int test_run)
+{
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+  400c5a:	48 89 c5             	mov    %rax,%rbp
+VirtualDerived():
+/projects/virtual/virtual.cpp:16
+class VirtualDerived : public VirtualBase
+{
+	private :
+		int m_counter;
+	public :
+		VirtualDerived() : m_counter(0) {}
+  400c5d:	48 c7 00 f0 0d 40 00 	movq   $0x400df0,(%rax)
+  400c64:	c7 40 08 00 00 00 00 	movl   $0x0,0x8(%rax)
+_Z20test_virtual_methodsi():
+/projects/virtual/virtual.cpp:23
+};
+
+void test_virtual_methods (int test_run)
+{
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+	for( int i = 0 ; i < test_run; i++ )
+  400c6b:	7e 35                	jle    400ca2 <_Z20test_virtual_methodsi+0x62>
+  400c6d:	b8 f0 0d 40 00       	mov    $0x400df0,%eax
+  400c72:	45 31 ed             	xor    %r13d,%r13d
+  400c75:	0f 1f 00             	nopl   (%rax)
+/projects/virtual/virtual.cpp:21 (discriminator 1)
+		VirtualDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_virtual_methods (int test_run)
+{
+  400c78:	31 db                	xor    %ebx,%ebx
+  400c7a:	eb 08                	jmp    400c84 <_Z20test_virtual_methodsi+0x44>
+  400c7c:	0f 1f 40 00          	nopl   0x0(%rax)
+  400c80:	48 8b 45 00          	mov    0x0(%rbp),%rax
+/projects/virtual/virtual.cpp:27 (discriminator 2)
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+		{
+			pObj->tick(j);
+  400c84:	89 de                	mov    %ebx,%esi
+/projects/virtual/virtual.cpp:25 (discriminator 2)
+void test_virtual_methods (int test_run)
+{
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400c86:	83 c3 01             	add    $0x1,%ebx
+/projects/virtual/virtual.cpp:27 (discriminator 2)
+		{
+			pObj->tick(j);
+  400c89:	48 89 ef             	mov    %rbp,%rdi
+  400c8c:	ff 10                	callq  *(%rax)
+/projects/virtual/virtual.cpp:25 (discriminator 2)
+void test_virtual_methods (int test_run)
+{
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400c8e:	44 39 e3             	cmp    %r12d,%ebx
+  400c91:	75 ed                	jne    400c80 <_Z20test_virtual_methodsi+0x40>
+/projects/virtual/virtual.cpp:23
+};
+
+void test_virtual_methods (int test_run)
+{
+	VirtualBase* pObj = static_cast<VirtualBase*>(new VirtualDerived);
+	for( int i = 0 ; i < test_run; i++ )
+  400c93:	41 83 c5 01          	add    $0x1,%r13d
+  400c97:	45 39 e5             	cmp    %r12d,%r13d
+  400c9a:	74 06                	je     400ca2 <_Z20test_virtual_methodsi+0x62>
+  400c9c:	48 8b 45 00          	mov    0x0(%rbp),%rax
+  400ca0:	eb d6                	jmp    400c78 <_Z20test_virtual_methodsi+0x38>
+/projects/virtual/virtual.cpp:31
+		{
+			pObj->tick(j);
+			//cout << pObj->tick(j) << endl;
+		}
+	}
+}
+  400ca2:	48 83 c4 08          	add    $0x8,%rsp
+  400ca6:	5b                   	pop    %rbx
+  400ca7:	5d                   	pop    %rbp
+  400ca8:	41 5c                	pop    %r12
+  400caa:	41 5d                	pop    %r13
+  400cac:	c3                   	retq   
+  400cad:	0f 1f 00             	nopl   (%rax)
+
+0000000000400cb0 <_ZN14VirtualDerived4tickEi>:
+_ZN14VirtualDerived4tickEi():
+/projects/virtual/virtual.cpp:17
+{
+	private :
+		int m_counter;
+	public :
+		VirtualDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400cb0:	8b 47 08             	mov    0x8(%rdi),%eax
+  400cb3:	01 f0                	add    %esi,%eax
+  400cb5:	89 47 08             	mov    %eax,0x8(%rdi)
+  400cb8:	c3                   	retq   
+  400cb9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000400cc0 <__libc_csu_init>:
+__libc_csu_init():
+  400cc0:	41 57                	push   %r15
+  400cc2:	41 89 ff             	mov    %edi,%r15d
+  400cc5:	41 56                	push   %r14
+  400cc7:	49 89 f6             	mov    %rsi,%r14
+  400cca:	41 55                	push   %r13
+  400ccc:	49 89 d5             	mov    %rdx,%r13
+  400ccf:	41 54                	push   %r12
+  400cd1:	4c 8d 25 00 11 20 00 	lea    0x201100(%rip),%r12        # 601dd8 <__frame_dummy_init_array_entry>
+  400cd8:	55                   	push   %rbp
+  400cd9:	48 8d 2d 08 11 20 00 	lea    0x201108(%rip),%rbp        # 601de8 <__init_array_end>
+  400ce0:	53                   	push   %rbx
+  400ce1:	4c 29 e5             	sub    %r12,%rbp
+  400ce4:	31 db                	xor    %ebx,%ebx
+  400ce6:	48 c1 fd 03          	sar    $0x3,%rbp
+  400cea:	48 83 ec 08          	sub    $0x8,%rsp
+  400cee:	e8 3d fc ff ff       	callq  400930 <_init>
+  400cf3:	48 85 ed             	test   %rbp,%rbp
+  400cf6:	74 1e                	je     400d16 <__libc_csu_init+0x56>
+  400cf8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  400cff:	00 
+  400d00:	4c 89 ea             	mov    %r13,%rdx
+  400d03:	4c 89 f6             	mov    %r14,%rsi
+  400d06:	44 89 ff             	mov    %r15d,%edi
+  400d09:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  400d0d:	48 83 c3 01          	add    $0x1,%rbx
+  400d11:	48 39 eb             	cmp    %rbp,%rbx
+  400d14:	75 ea                	jne    400d00 <__libc_csu_init+0x40>
+  400d16:	48 83 c4 08          	add    $0x8,%rsp
+  400d1a:	5b                   	pop    %rbx
+  400d1b:	5d                   	pop    %rbp
+  400d1c:	41 5c                	pop    %r12
+  400d1e:	41 5d                	pop    %r13
+  400d20:	41 5e                	pop    %r14
+  400d22:	41 5f                	pop    %r15
+  400d24:	c3                   	retq   
+  400d25:	66 66 2e 0f 1f 84 00 	data32 nopw %cs:0x0(%rax,%rax,1)
+  400d2c:	00 00 00 00 
+
+0000000000400d30 <__libc_csu_fini>:
+__libc_csu_fini():
+  400d30:	f3 c3                	repz retq 
+  400d32:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .fini:
+
+0000000000400d34 <_fini>:
+_fini():
+  400d34:	48 83 ec 08          	sub    $0x8,%rsp
+  400d38:	48 83 c4 08          	add    $0x8,%rsp
+  400d3c:	c3                   	retq   

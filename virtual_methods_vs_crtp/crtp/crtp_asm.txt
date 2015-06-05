@@ -1,0 +1,770 @@
+
+crtp:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000400828 <_init>:
+_init():
+  400828:	48 83 ec 08          	sub    $0x8,%rsp
+  40082c:	48 8b 05 c5 17 20 00 	mov    0x2017c5(%rip),%rax        # 601ff8 <_DYNAMIC+0x200>
+  400833:	48 85 c0             	test   %rax,%rax
+  400836:	74 05                	je     40083d <_init+0x15>
+  400838:	e8 23 00 00 00       	callq  400860 <__gmon_start__@plt>
+  40083d:	48 83 c4 08          	add    $0x8,%rsp
+  400841:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000400850 <__gmon_start__@plt-0x10>:
+  400850:	ff 35 b2 17 20 00    	pushq  0x2017b2(%rip)        # 602008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  400856:	ff 25 b4 17 20 00    	jmpq   *0x2017b4(%rip)        # 602010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  40085c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400860 <__gmon_start__@plt>:
+  400860:	ff 25 b2 17 20 00    	jmpq   *0x2017b2(%rip)        # 602018 <_GLOBAL_OFFSET_TABLE_+0x18>
+  400866:	68 00 00 00 00       	pushq  $0x0
+  40086b:	e9 e0 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400870 <_ZNSs4_Rep10_M_disposeERKSaIcE@plt>:
+  400870:	ff 25 aa 17 20 00    	jmpq   *0x2017aa(%rip)        # 602020 <_GLOBAL_OFFSET_TABLE_+0x20>
+  400876:	68 01 00 00 00       	pushq  $0x1
+  40087b:	e9 d0 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400880 <_ZNSt8ios_base4InitC1Ev@plt>:
+  400880:	ff 25 a2 17 20 00    	jmpq   *0x2017a2(%rip)        # 602028 <_GLOBAL_OFFSET_TABLE_+0x28>
+  400886:	68 02 00 00 00       	pushq  $0x2
+  40088b:	e9 c0 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400890 <__libc_start_main@plt>:
+  400890:	ff 25 9a 17 20 00    	jmpq   *0x20179a(%rip)        # 602030 <_GLOBAL_OFFSET_TABLE_+0x30>
+  400896:	68 03 00 00 00       	pushq  $0x3
+  40089b:	e9 b0 ff ff ff       	jmpq   400850 <_init+0x28>
+
+00000000004008a0 <_ZSt24__throw_invalid_argumentPKc@plt>:
+  4008a0:	ff 25 92 17 20 00    	jmpq   *0x201792(%rip)        # 602038 <_GLOBAL_OFFSET_TABLE_+0x38>
+  4008a6:	68 04 00 00 00       	pushq  $0x4
+  4008ab:	e9 a0 ff ff ff       	jmpq   400850 <_init+0x28>
+
+00000000004008b0 <__cxa_atexit@plt>:
+  4008b0:	ff 25 8a 17 20 00    	jmpq   *0x20178a(%rip)        # 602040 <_GLOBAL_OFFSET_TABLE_+0x40>
+  4008b6:	68 05 00 00 00       	pushq  $0x5
+  4008bb:	e9 90 ff ff ff       	jmpq   400850 <_init+0x28>
+
+00000000004008c0 <_ZSt20__throw_out_of_rangePKc@plt>:
+  4008c0:	ff 25 82 17 20 00    	jmpq   *0x201782(%rip)        # 602048 <_GLOBAL_OFFSET_TABLE_+0x48>
+  4008c6:	68 06 00 00 00       	pushq  $0x6
+  4008cb:	e9 80 ff ff ff       	jmpq   400850 <_init+0x28>
+
+00000000004008d0 <_ZNSt8ios_base4InitD1Ev@plt>:
+  4008d0:	ff 25 7a 17 20 00    	jmpq   *0x20177a(%rip)        # 602050 <_GLOBAL_OFFSET_TABLE_+0x50>
+  4008d6:	68 07 00 00 00       	pushq  $0x7
+  4008db:	e9 70 ff ff ff       	jmpq   400850 <_init+0x28>
+
+00000000004008e0 <_ZNSsC1EPKcRKSaIcE@plt>:
+  4008e0:	ff 25 72 17 20 00    	jmpq   *0x201772(%rip)        # 602058 <_GLOBAL_OFFSET_TABLE_+0x58>
+  4008e6:	68 08 00 00 00       	pushq  $0x8
+  4008eb:	e9 60 ff ff ff       	jmpq   400850 <_init+0x28>
+
+00000000004008f0 <strtol@plt>:
+  4008f0:	ff 25 6a 17 20 00    	jmpq   *0x20176a(%rip)        # 602060 <_GLOBAL_OFFSET_TABLE_+0x60>
+  4008f6:	68 09 00 00 00       	pushq  $0x9
+  4008fb:	e9 50 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400900 <__errno_location@plt>:
+  400900:	ff 25 62 17 20 00    	jmpq   *0x201762(%rip)        # 602068 <_GLOBAL_OFFSET_TABLE_+0x68>
+  400906:	68 0a 00 00 00       	pushq  $0xa
+  40090b:	e9 40 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400910 <__gxx_personality_v0@plt>:
+  400910:	ff 25 5a 17 20 00    	jmpq   *0x20175a(%rip)        # 602070 <_GLOBAL_OFFSET_TABLE_+0x70>
+  400916:	68 0b 00 00 00       	pushq  $0xb
+  40091b:	e9 30 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400920 <_Znwm@plt>:
+  400920:	ff 25 52 17 20 00    	jmpq   *0x201752(%rip)        # 602078 <_GLOBAL_OFFSET_TABLE_+0x78>
+  400926:	68 0c 00 00 00       	pushq  $0xc
+  40092b:	e9 20 ff ff ff       	jmpq   400850 <_init+0x28>
+
+0000000000400930 <_Unwind_Resume@plt>:
+  400930:	ff 25 4a 17 20 00    	jmpq   *0x20174a(%rip)        # 602080 <_GLOBAL_OFFSET_TABLE_+0x80>
+  400936:	68 0d 00 00 00       	pushq  $0xd
+  40093b:	e9 10 ff ff ff       	jmpq   400850 <_init+0x28>
+
+Disassembly of section .text:
+
+0000000000400940 <main>:
+main():
+/projects/crtp/crtp.cpp:41
+	}
+}
+
+int main (int argc, char** argv)
+{
+	if( argc < 2 ) return -1;
+  400940:	83 ff 01             	cmp    $0x1,%edi
+  400943:	0f 8e 88 00 00 00    	jle    4009d1 <main+0x91>
+/projects/crtp/crtp.cpp:40
+		}
+	}
+}
+
+int main (int argc, char** argv)
+{
+  400949:	41 54                	push   %r12
+  40094b:	55                   	push   %rbp
+  40094c:	53                   	push   %rbx
+  40094d:	48 83 ec 30          	sub    $0x30,%rsp
+/projects/crtp/crtp.cpp:43
+	if( argc < 2 ) return -1;
+	
+	int test_run = stoi ( string(argv[1]) );
+  400951:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+  400955:	48 8d 54 24 0e       	lea    0xe(%rsp),%rdx
+  40095a:	48 8d 7c 24 10       	lea    0x10(%rsp),%rdi
+  40095f:	e8 7c ff ff ff       	callq  4008e0 <_ZNSsC1EPKcRKSaIcE@plt>
+_ZNKSs7_M_dataEv():
+/usr/include/c++/4.8.2/bits/basic_string.h:293
+      // Data Members (private):
+      mutable _Alloc_hider	_M_dataplus;
+
+      _CharT*
+      _M_data() const
+      { return  _M_dataplus._M_p; }
+  400964:	48 8b 5c 24 10       	mov    0x10(%rsp),%rbx
+__stoa<long int, int, char, int>():
+/usr/include/c++/4.8.2/ext/string_conversions.h:61
+	   _Base... __base)
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+  400969:	e8 92 ff ff ff       	callq  400900 <__errno_location@plt>
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  40096e:	48 8d 74 24 20       	lea    0x20(%rsp),%rsi
+/usr/include/c++/4.8.2/ext/string_conversions.h:61
+	   _Base... __base)
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+  400973:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  400979:	ba 0a 00 00 00       	mov    $0xa,%edx
+  40097e:	48 89 df             	mov    %rbx,%rdi
+/usr/include/c++/4.8.2/ext/string_conversions.h:61
+	   _Base... __base)
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+  400981:	48 89 c5             	mov    %rax,%rbp
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  400984:	e8 67 ff ff ff       	callq  4008f0 <strtol@plt>
+/usr/include/c++/4.8.2/ext/string_conversions.h:64
+
+      if (__endptr == __str)
+  400989:	48 3b 5c 24 20       	cmp    0x20(%rsp),%rbx
+/usr/include/c++/4.8.2/ext/string_conversions.h:62
+    {
+      _Ret __ret;
+
+      _CharT* __endptr;
+      errno = 0;
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+  40098e:	49 89 c4             	mov    %rax,%r12
+/usr/include/c++/4.8.2/ext/string_conversions.h:64
+
+      if (__endptr == __str)
+  400991:	74 6a                	je     4009fd <main+0xbd>
+/usr/include/c++/4.8.2/ext/string_conversions.h:66
+	std::__throw_invalid_argument(__name);
+      else if (errno == ERANGE
+  400993:	83 7d 00 22          	cmpl   $0x22,0x0(%rbp)
+  400997:	74 3c                	je     4009d5 <main+0x95>
+  400999:	ba 00 00 00 80       	mov    $0x80000000,%edx
+  40099e:	48 01 c2             	add    %rax,%rdx
+  4009a1:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  4009a6:	48 39 c2             	cmp    %rax,%rdx
+  4009a9:	77 2a                	ja     4009d5 <main+0x95>
+~basic_string():
+/usr/include/c++/4.8.2/bits/basic_string.h:539
+
+      /**
+       *  @brief  Destroy the string instance.
+       */
+      ~basic_string() _GLIBCXX_NOEXCEPT
+      { _M_rep()->_M_dispose(this->get_allocator()); }
+  4009ab:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  4009b0:	48 8d 74 24 20       	lea    0x20(%rsp),%rsi
+  4009b5:	48 8d 78 e8          	lea    -0x18(%rax),%rdi
+  4009b9:	e8 b2 fe ff ff       	callq  400870 <_ZNSs4_Rep10_M_disposeERKSaIcE@plt>
+main():
+/projects/crtp/crtp.cpp:45
+	
+	test_crtp(test_run);
+  4009be:	44 89 e7             	mov    %r12d,%edi
+  4009c1:	e8 6a 01 00 00       	callq  400b30 <_Z9test_crtpi>
+/projects/crtp/crtp.cpp:48
+	
+	return 0;
+  4009c6:	48 83 c4 30          	add    $0x30,%rsp
+/projects/crtp/crtp.cpp:47
+	
+	int test_run = stoi ( string(argv[1]) );
+	
+	test_crtp(test_run);
+	
+	return 0;
+  4009ca:	31 c0                	xor    %eax,%eax
+/projects/crtp/crtp.cpp:48
+  4009cc:	5b                   	pop    %rbx
+  4009cd:	5d                   	pop    %rbp
+  4009ce:	41 5c                	pop    %r12
+  4009d0:	c3                   	retq   
+/projects/crtp/crtp.cpp:41
+	}
+}
+
+int main (int argc, char** argv)
+{
+	if( argc < 2 ) return -1;
+  4009d1:	83 c8 ff             	or     $0xffffffff,%eax
+/projects/crtp/crtp.cpp:48
+	int test_run = stoi ( string(argv[1]) );
+	
+	test_crtp(test_run);
+	
+	return 0;
+  4009d4:	c3                   	retq   
+stoi():
+/usr/include/c++/4.8.2/ext/string_conversions.h:70
+	       || (std::__are_same<_Ret, int>::__value
+		   && (__tmp < __numeric_traits<int>::__min
+		       || __tmp > __numeric_traits<int>::__max)))
+	std::__throw_out_of_range(__name);
+  4009d5:	bf e0 0c 40 00       	mov    $0x400ce0,%edi
+  4009da:	e8 e1 fe ff ff       	callq  4008c0 <_ZSt20__throw_out_of_rangePKc@plt>
+  4009df:	48 89 c3             	mov    %rax,%rbx
+~basic_string():
+/usr/include/c++/4.8.2/bits/basic_string.h:539
+  4009e2:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  4009e7:	48 8d 74 24 0f       	lea    0xf(%rsp),%rsi
+  4009ec:	48 8d 78 e8          	lea    -0x18(%rax),%rdi
+  4009f0:	e8 7b fe ff ff       	callq  400870 <_ZNSs4_Rep10_M_disposeERKSaIcE@plt>
+  4009f5:	48 89 df             	mov    %rbx,%rdi
+  4009f8:	e8 33 ff ff ff       	callq  400930 <_Unwind_Resume@plt>
+stoi():
+/usr/include/c++/4.8.2/ext/string_conversions.h:65
+      _CharT* __endptr;
+      errno = 0;
+      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+
+      if (__endptr == __str)
+	std::__throw_invalid_argument(__name);
+  4009fd:	bf e0 0c 40 00       	mov    $0x400ce0,%edi
+  400a02:	e8 99 fe ff ff       	callq  4008a0 <_ZSt24__throw_invalid_argumentPKc@plt>
+main():
+  400a07:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  400a0e:	00 00 
+
+0000000000400a10 <_GLOBAL__sub_I__Z9test_crtpi>:
+_GLOBAL__sub_I__Z9test_crtpi():
+/projects/crtp/crtp.cpp:48
+  400a10:	48 83 ec 08          	sub    $0x8,%rsp
+__static_initialization_and_destruction_0():
+/usr/include/c++/4.8.2/iostream:74
+  extern wostream wclog;	/// Linked to standard error (buffered)
+#endif
+  //@}
+
+  // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  static ios_base::Init __ioinit;
+  400a14:	bf 90 20 60 00       	mov    $0x602090,%edi
+  400a19:	e8 62 fe ff ff       	callq  400880 <_ZNSt8ios_base4InitC1Ev@plt>
+  400a1e:	ba d8 0c 40 00       	mov    $0x400cd8,%edx
+  400a23:	be 90 20 60 00       	mov    $0x602090,%esi
+  400a28:	bf d0 08 40 00       	mov    $0x4008d0,%edi
+_GLOBAL__sub_I__Z9test_crtpi():
+/projects/crtp/crtp.cpp:48
+  400a2d:	48 83 c4 08          	add    $0x8,%rsp
+__static_initialization_and_destruction_0():
+/usr/include/c++/4.8.2/iostream:74
+  400a31:	e9 7a fe ff ff       	jmpq   4008b0 <__cxa_atexit@plt>
+_GLOBAL__sub_I__Z9test_crtpi():
+  400a36:	66 90                	xchg   %ax,%ax
+
+0000000000400a38 <_start>:
+_start():
+  400a38:	31 ed                	xor    %ebp,%ebp
+  400a3a:	49 89 d1             	mov    %rdx,%r9
+  400a3d:	5e                   	pop    %rsi
+  400a3e:	48 89 e2             	mov    %rsp,%rdx
+  400a41:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  400a45:	50                   	push   %rax
+  400a46:	54                   	push   %rsp
+  400a47:	49 c7 c0 c0 0c 40 00 	mov    $0x400cc0,%r8
+  400a4e:	48 c7 c1 50 0c 40 00 	mov    $0x400c50,%rcx
+  400a55:	48 c7 c7 40 09 40 00 	mov    $0x400940,%rdi
+  400a5c:	e8 2f fe ff ff       	callq  400890 <__libc_start_main@plt>
+  400a61:	f4                   	hlt    
+  400a62:	66 90                	xchg   %ax,%ax
+  400a64:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  400a6b:	00 00 00 
+  400a6e:	66 90                	xchg   %ax,%ax
+
+0000000000400a70 <deregister_tm_clones>:
+deregister_tm_clones():
+  400a70:	b8 97 20 60 00       	mov    $0x602097,%eax
+  400a75:	55                   	push   %rbp
+  400a76:	48 2d 90 20 60 00    	sub    $0x602090,%rax
+  400a7c:	48 83 f8 0e          	cmp    $0xe,%rax
+  400a80:	48 89 e5             	mov    %rsp,%rbp
+  400a83:	77 02                	ja     400a87 <deregister_tm_clones+0x17>
+  400a85:	5d                   	pop    %rbp
+  400a86:	c3                   	retq   
+  400a87:	b8 00 00 00 00       	mov    $0x0,%eax
+  400a8c:	48 85 c0             	test   %rax,%rax
+  400a8f:	74 f4                	je     400a85 <deregister_tm_clones+0x15>
+  400a91:	5d                   	pop    %rbp
+  400a92:	bf 90 20 60 00       	mov    $0x602090,%edi
+  400a97:	ff e0                	jmpq   *%rax
+  400a99:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000400aa0 <register_tm_clones>:
+register_tm_clones():
+  400aa0:	b8 90 20 60 00       	mov    $0x602090,%eax
+  400aa5:	55                   	push   %rbp
+  400aa6:	48 2d 90 20 60 00    	sub    $0x602090,%rax
+  400aac:	48 c1 f8 03          	sar    $0x3,%rax
+  400ab0:	48 89 e5             	mov    %rsp,%rbp
+  400ab3:	48 89 c2             	mov    %rax,%rdx
+  400ab6:	48 c1 ea 3f          	shr    $0x3f,%rdx
+  400aba:	48 01 d0             	add    %rdx,%rax
+  400abd:	48 d1 f8             	sar    %rax
+  400ac0:	75 02                	jne    400ac4 <register_tm_clones+0x24>
+  400ac2:	5d                   	pop    %rbp
+  400ac3:	c3                   	retq   
+  400ac4:	ba 00 00 00 00       	mov    $0x0,%edx
+  400ac9:	48 85 d2             	test   %rdx,%rdx
+  400acc:	74 f4                	je     400ac2 <register_tm_clones+0x22>
+  400ace:	5d                   	pop    %rbp
+  400acf:	48 89 c6             	mov    %rax,%rsi
+  400ad2:	bf 90 20 60 00       	mov    $0x602090,%edi
+  400ad7:	ff e2                	jmpq   *%rdx
+  400ad9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000400ae0 <__do_global_dtors_aux>:
+__do_global_dtors_aux():
+  400ae0:	80 3d a5 15 20 00 00 	cmpb   $0x0,0x2015a5(%rip)        # 60208c <_edata>
+  400ae7:	75 11                	jne    400afa <__do_global_dtors_aux+0x1a>
+  400ae9:	55                   	push   %rbp
+  400aea:	48 89 e5             	mov    %rsp,%rbp
+  400aed:	e8 7e ff ff ff       	callq  400a70 <deregister_tm_clones>
+  400af2:	5d                   	pop    %rbp
+  400af3:	c6 05 92 15 20 00 01 	movb   $0x1,0x201592(%rip)        # 60208c <_edata>
+  400afa:	f3 c3                	repz retq 
+  400afc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400b00 <frame_dummy>:
+frame_dummy():
+  400b00:	48 83 3d e8 12 20 00 	cmpq   $0x0,0x2012e8(%rip)        # 601df0 <__JCR_END__>
+  400b07:	00 
+  400b08:	74 1e                	je     400b28 <frame_dummy+0x28>
+  400b0a:	b8 00 00 00 00       	mov    $0x0,%eax
+  400b0f:	48 85 c0             	test   %rax,%rax
+  400b12:	74 14                	je     400b28 <frame_dummy+0x28>
+  400b14:	55                   	push   %rbp
+  400b15:	bf f0 1d 60 00       	mov    $0x601df0,%edi
+  400b1a:	48 89 e5             	mov    %rsp,%rbp
+  400b1d:	ff d0                	callq  *%rax
+  400b1f:	5d                   	pop    %rbp
+  400b20:	e9 7b ff ff ff       	jmpq   400aa0 <register_tm_clones>
+  400b25:	0f 1f 00             	nopl   (%rax)
+  400b28:	e9 73 ff ff ff       	jmpq   400aa0 <register_tm_clones>
+  400b2d:	0f 1f 00             	nopl   (%rax)
+
+0000000000400b30 <_Z9test_crtpi>:
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:27
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_crtp (int test_run)
+{
+  400b30:	53                   	push   %rbx
+  400b31:	89 fb                	mov    %edi,%ebx
+/projects/crtp/crtp.cpp:28
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+  400b33:	bf 04 00 00 00       	mov    $0x4,%edi
+/projects/crtp/crtp.cpp:27
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_crtp (int test_run)
+{
+  400b38:	48 83 ec 10          	sub    $0x10,%rsp
+/projects/crtp/crtp.cpp:28
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+  400b3c:	e8 df fd ff ff       	callq  400920 <_Znwm@plt>
+/projects/crtp/crtp.cpp:29
+	for( int i = 0 ; i < test_run; i++ )
+  400b41:	85 db                	test   %ebx,%ebx
+CRTPDerived():
+/projects/crtp/crtp.cpp:22
+class CRTPDerived : public CRTPBase<CRTPDerived> 
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+  400b43:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:29
+};
+
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+  400b49:	0f 8e f3 00 00 00    	jle    400c42 <_Z9test_crtpi+0x112>
+  400b4f:	41 89 d8             	mov    %ebx,%r8d
+  400b52:	66 0f 6f 1d a6 01 00 	movdqa 0x1a6(%rip),%xmm3        # 400d00 <__dso_handle+0x28>
+  400b59:	00 
+  400b5a:	41 c1 e8 02          	shr    $0x2,%r8d
+  400b5e:	46 8d 14 85 00 00 00 	lea    0x0(,%r8,4),%r10d
+  400b65:	00 
+/projects/crtp/crtp.cpp:27
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_crtp (int test_run)
+{
+  400b66:	66 0f 6f 25 82 01 00 	movdqa 0x182(%rip),%xmm4        # 400cf0 <__dso_handle+0x18>
+  400b6d:	00 
+  400b6e:	45 85 d2             	test   %r10d,%r10d
+  400b71:	41 0f 94 c1          	sete   %r9b
+  400b75:	83 fb 09             	cmp    $0x9,%ebx
+  400b78:	0f 96 c2             	setbe  %dl
+/projects/crtp/crtp.cpp:29
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+  400b7b:	31 f6                	xor    %esi,%esi
+  400b7d:	41 09 d1             	or     %edx,%r9d
+  400b80:	31 d2                	xor    %edx,%edx
+  400b82:	e9 88 00 00 00       	jmpq   400c0f <_Z9test_crtpi+0xdf>
+  400b87:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  400b8e:	00 00 
+  400b90:	66 0f 6f e8          	movdqa %xmm0,%xmm5
+  400b94:	66 0f 73 dd 08       	psrldq $0x8,%xmm5
+  400b99:	66 0f fe c5          	paddd  %xmm5,%xmm0
+  400b9d:	66 0f 6f f0          	movdqa %xmm0,%xmm6
+  400ba1:	66 0f 73 de 04       	psrldq $0x4,%xmm6
+  400ba6:	66 0f fe c6          	paddd  %xmm6,%xmm0
+  400baa:	66 0f 7e 44 24 0c    	movd   %xmm0,0xc(%rsp)
+_ZN11CRTPDerived4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bb0:	03 54 24 0c          	add    0xc(%rsp),%edx
+  400bb4:	44 39 d3             	cmp    %r10d,%ebx
+  400bb7:	74 4f                	je     400c08 <_Z9test_crtpi+0xd8>
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bb9:	44 89 d1             	mov    %r10d,%ecx
+  400bbc:	8d 79 01             	lea    0x1(%rcx),%edi
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bbf:	01 ca                	add    %ecx,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bc1:	39 fb                	cmp    %edi,%ebx
+  400bc3:	7e 43                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bc5:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bc7:	8d 79 02             	lea    0x2(%rcx),%edi
+  400bca:	39 fb                	cmp    %edi,%ebx
+  400bcc:	7e 3a                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bce:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bd0:	8d 79 03             	lea    0x3(%rcx),%edi
+  400bd3:	39 fb                	cmp    %edi,%ebx
+  400bd5:	7e 31                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bd7:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bd9:	8d 79 04             	lea    0x4(%rcx),%edi
+  400bdc:	39 fb                	cmp    %edi,%ebx
+  400bde:	7e 28                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400be0:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400be2:	8d 79 05             	lea    0x5(%rcx),%edi
+  400be5:	39 fb                	cmp    %edi,%ebx
+  400be7:	7e 1f                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400be9:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400beb:	8d 79 06             	lea    0x6(%rcx),%edi
+  400bee:	39 fb                	cmp    %edi,%ebx
+  400bf0:	7e 16                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bf2:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bf4:	8d 79 07             	lea    0x7(%rcx),%edi
+  400bf7:	39 fb                	cmp    %edi,%ebx
+  400bf9:	7e 0d                	jle    400c08 <_Z9test_crtpi+0xd8>
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400bfb:	01 fa                	add    %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:31
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+	{
+		for( int j = 0 ; j < test_run; j++ )
+  400bfd:	83 c1 08             	add    $0x8,%ecx
+_ZN8CRTPBaseI11CRTPDerivedE4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400c00:	8d 3c 0a             	lea    (%rdx,%rcx,1),%edi
+  400c03:	39 cb                	cmp    %ecx,%ebx
+  400c05:	0f 4f d7             	cmovg  %edi,%edx
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:29
+};
+
+void test_crtp (int test_run)
+{
+	CRTPBase<CRTPDerived>* pObj = new CRTPDerived ;
+	for( int i = 0 ; i < test_run; i++ )
+  400c08:	83 c6 01             	add    $0x1,%esi
+  400c0b:	39 de                	cmp    %ebx,%esi
+  400c0d:	74 31                	je     400c40 <_Z9test_crtpi+0x110>
+/projects/crtp/crtp.cpp:27 (discriminator 1)
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+};
+
+void test_crtp (int test_run)
+{
+  400c0f:	31 c9                	xor    %ecx,%ecx
+  400c11:	45 84 c9             	test   %r9b,%r9b
+  400c14:	75 a6                	jne    400bbc <_Z9test_crtpi+0x8c>
+/projects/crtp/crtp.cpp:27
+  400c16:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  400c1a:	66 0f 6f cc          	movdqa %xmm4,%xmm1
+  400c1e:	66 0f 6f d1          	movdqa %xmm1,%xmm2
+  400c22:	83 c1 01             	add    $0x1,%ecx
+_ZN11CRTPDerived4tickEi():
+/projects/crtp/crtp.cpp:23
+{
+	private :
+		int m_counter;
+	public:
+		CRTPDerived() : m_counter(0) {}
+		int tick(int n) { m_counter += n; return m_counter; }
+  400c25:	66 0f fe c1          	paddd  %xmm1,%xmm0
+  400c29:	41 39 c8             	cmp    %ecx,%r8d
+  400c2c:	66 0f fe d3          	paddd  %xmm3,%xmm2
+  400c30:	0f 86 5a ff ff ff    	jbe    400b90 <_Z9test_crtpi+0x60>
+  400c36:	66 0f 6f ca          	movdqa %xmm2,%xmm1
+  400c3a:	eb e2                	jmp    400c1e <_Z9test_crtpi+0xee>
+  400c3c:	0f 1f 40 00          	nopl   0x0(%rax)
+  400c40:	89 10                	mov    %edx,(%rax)
+_Z9test_crtpi():
+/projects/crtp/crtp.cpp:37
+		{
+			pObj->tick(j);
+			//cout << pObj->tick(j) << endl; 
+		}
+	}
+}
+  400c42:	48 83 c4 10          	add    $0x10,%rsp
+  400c46:	5b                   	pop    %rbx
+  400c47:	c3                   	retq   
+  400c48:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  400c4f:	00 
+
+0000000000400c50 <__libc_csu_init>:
+__libc_csu_init():
+  400c50:	41 57                	push   %r15
+  400c52:	41 89 ff             	mov    %edi,%r15d
+  400c55:	41 56                	push   %r14
+  400c57:	49 89 f6             	mov    %rsi,%r14
+  400c5a:	41 55                	push   %r13
+  400c5c:	49 89 d5             	mov    %rdx,%r13
+  400c5f:	41 54                	push   %r12
+  400c61:	4c 8d 25 70 11 20 00 	lea    0x201170(%rip),%r12        # 601dd8 <__frame_dummy_init_array_entry>
+  400c68:	55                   	push   %rbp
+  400c69:	48 8d 2d 78 11 20 00 	lea    0x201178(%rip),%rbp        # 601de8 <__init_array_end>
+  400c70:	53                   	push   %rbx
+  400c71:	4c 29 e5             	sub    %r12,%rbp
+  400c74:	31 db                	xor    %ebx,%ebx
+  400c76:	48 c1 fd 03          	sar    $0x3,%rbp
+  400c7a:	48 83 ec 08          	sub    $0x8,%rsp
+  400c7e:	e8 a5 fb ff ff       	callq  400828 <_init>
+  400c83:	48 85 ed             	test   %rbp,%rbp
+  400c86:	74 1e                	je     400ca6 <__libc_csu_init+0x56>
+  400c88:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  400c8f:	00 
+  400c90:	4c 89 ea             	mov    %r13,%rdx
+  400c93:	4c 89 f6             	mov    %r14,%rsi
+  400c96:	44 89 ff             	mov    %r15d,%edi
+  400c99:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  400c9d:	48 83 c3 01          	add    $0x1,%rbx
+  400ca1:	48 39 eb             	cmp    %rbp,%rbx
+  400ca4:	75 ea                	jne    400c90 <__libc_csu_init+0x40>
+  400ca6:	48 83 c4 08          	add    $0x8,%rsp
+  400caa:	5b                   	pop    %rbx
+  400cab:	5d                   	pop    %rbp
+  400cac:	41 5c                	pop    %r12
+  400cae:	41 5d                	pop    %r13
+  400cb0:	41 5e                	pop    %r14
+  400cb2:	41 5f                	pop    %r15
+  400cb4:	c3                   	retq   
+  400cb5:	66 66 2e 0f 1f 84 00 	data32 nopw %cs:0x0(%rax,%rax,1)
+  400cbc:	00 00 00 00 
+
+0000000000400cc0 <__libc_csu_fini>:
+__libc_csu_fini():
+  400cc0:	f3 c3                	repz retq 
+  400cc2:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .fini:
+
+0000000000400cc4 <_fini>:
+_fini():
+  400cc4:	48 83 ec 08          	sub    $0x8,%rsp
+  400cc8:	48 83 c4 08          	add    $0x8,%rsp
+  400ccc:	c3                   	retq   

@@ -1,12 +1,11 @@
 #!/usr/bin/make -f
 CC=g++
 SOURCE_DIR=.
-SOURCES =  virtual_methods.cpp
+SOURCES =  crtp.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
-EXECUTABLE = virtual_methods
+EXECUTABLE = crtp
 
-CFLAGS= -I. -std=c++11 -c -pg
-LFLAGS= -pg
+CFLAGS= -I. -std=c++11 -c
 
 benchmark1: CFLAGS += -fno-inline
 benchmark1: all
@@ -20,7 +19,7 @@ benchmark3: all
 all: $(OBJECTS) $(EXECUTABLE)
 
 $(EXECUTABLE) : $(OBJECTS)
-		$(CC) $(LFLAGS) $(OBJECTS) -o $@ 
+		$(CC) $(OBJECTS) -o $@ 
 
 .cpp.o: *.h
 	$(CC) $(CFLAGS) $< -o $@
