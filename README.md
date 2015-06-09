@@ -8,7 +8,7 @@ http://en.wikipedia.org/wiki/Public_domain_software
 In this repository I will collect benchmark source code. These are code
 for my blog articles on www.nativecoding.wordpress.com.
 
-1. Virtual Methods vs CRTP : https://nativecoding.wordpress.com/2015/01/30/virtual-methods-vs-crtp-benchmark/
+1. Virtual Methods vs CRTP : https://nativecoding.wordpress.com/2015/06/05/virtual-methods-vs-crtp-benchmark-2/
 
 2. C++11 STD Atomics vs Mutexes : https://nativecoding.wordpress.com/2015/02/15/transition-to-c11-the-most-important-features/
 
