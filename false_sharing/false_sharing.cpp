@@ -63,8 +63,8 @@ void* thread3(void* arg)
 
 int main (int argc, char** argv)
 {
-	cpu_set_t cpuset;
-	// Start Thread 1 and bind to core 0
+    cpu_set_t cpuset;
+    // Start Thread 1 and bind to core 0
     CPU_ZERO(&cpuset);
     CPU_SET(THREAD_1_CORE, &cpuset);
     
@@ -72,7 +72,7 @@ int main (int argc, char** argv)
     pthread_create(&t1, NULL, thread1, NULL);
     pthread_setaffinity_np(t1, sizeof(cpu_set_t), &cpuset);
     
-	// Start Thread 2 and bind to core 2
+    // Start Thread 2 and bind to core 2
     CPU_ZERO(&cpuset);
     CPU_SET(THREAD_2_CORE, &cpuset);
     
@@ -80,18 +80,18 @@ int main (int argc, char** argv)
     pthread_create(&t2, NULL, thread2, NULL);
     pthread_setaffinity_np(t2, sizeof(cpu_set_t), &cpuset);
 	
-	// Start Thread 3 and bind to core 4
-	CPU_ZERO(&cpuset);
+    // Start Thread 3 and bind to core 4
+    CPU_ZERO(&cpuset);
     CPU_SET(THREAD_3_CORE, &cpuset);
     
     pthread_t t3 ;
     pthread_create(&t3, NULL, thread3, NULL);
     pthread_setaffinity_np(t3, sizeof(cpu_set_t), &cpuset);
 	
-	// Join threads
+    // Join threads
     pthread_join(t1, NULL);
     pthread_join(t2, NULL);
-	pthread_join(t3, NULL);
+    pthread_join(t3, NULL);
 
     return 0;
 }
