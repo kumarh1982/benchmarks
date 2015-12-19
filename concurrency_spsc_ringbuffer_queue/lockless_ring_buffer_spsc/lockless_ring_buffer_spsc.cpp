@@ -1,3 +1,4 @@
+// USING SEQUENTIAL MEMORY
 #include<thread>
 #include<atomic>
 #include <cinttypes>
@@ -6,11 +7,6 @@ using namespace std;
 #define RING_BUFFER_SIZE 1000
 class lockless_ring_buffer_spsc
 {
-	private :
-		std::atomic<int64_t> write ;
-		std::atomic<int64_t> read;
-		int64_t size = RING_BUFFER_SIZE;
-		int64_t buffer[RING_BUFFER_SIZE];
 	public :
 		
 		lockless_ring_buffer_spsc()
@@ -21,17 +17,16 @@ class lockless_ring_buffer_spsc
 		
 		bool try_push(int64_t val)
 		{
-			int64_t read_limit = write - size + 1;
-			
-			if( read_limit == read.load() )
-			{
-				return false;
-			}
-			
-			buffer[write%size] = val;
-			write.fetch_add(1);
-			
-			return true;
+			const auto current_tail = write.load();
+            const auto next_tail = increment(current_tail);
+            if (next_tail != read.load())
+            {
+                buffer[current_tail] = val;
+                write.store(next_tail);
+                return true;
+            }
+
+            return false;  
 		}
 		
 		void push(int64_t val)
@@ -41,17 +36,17 @@ class lockless_ring_buffer_spsc
 		
 		bool try_pop(int64_t* pval)
 		{
-			int64_t write_limit = read - size + 1;
-			
-			if( write_limit == write.load() )
-			{
-				return false;
-			}
-			
-			*pval = buffer[read%size];
-			read.fetch_add(1);
-			
-			return true;
+			auto currentHead = read.load();
+            
+            if (currentHead == write.load())
+            {
+                return false;
+            }
+
+            *pval = buffer[currentHead];
+            read.store(increment(currentHead));
+
+            return true;
 		}
 		
 		int64_t pop()
@@ -60,6 +55,17 @@ class lockless_ring_buffer_spsc
 			while( ! try_pop(&ret) );
 			return ret;
 		}
+		
+	private :
+		std::atomic<int64_t> write ;
+		std::atomic<int64_t> read;
+		int64_t size = RING_BUFFER_SIZE;
+		int64_t buffer[RING_BUFFER_SIZE];
+		
+		int64_t increment(int n)
+        {
+            return (n + 1) % size;
+        }
 };
 
 int main (int argc, char** argv)
