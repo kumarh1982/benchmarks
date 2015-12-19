@@ -1,4 +1,4 @@
-// USING SEQUENTIAL MEMORY
+// USING ACQUIRE AND RELEASE SEMANTICS
 #include<thread>
 #include<atomic>
 #include <cinttypes>
