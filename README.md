@@ -17,3 +17,5 @@ for my blog articles on www.nativecoding.wordpress.com.
 4. False sharing : Aligned data vs non aligned data : https://nativecoding.wordpress.com/2015/06/19/multithreading-multicore-programming-and-false-sharing-benchmark/
 
 5. Fine grained vs coarse grained MPMC unbounded queue : https://nativecoding.wordpress.com/2015/08/30/multithreading-lock-contention-and-fine-grained-vs-coarse-grained-benchmark/
+
+6. Sequential-Consistency SPSC vs Acquire/Release SPSC : https://nativecoding.wordpress.com/2015/12/20/multithreading-memory-orderings-fine-grained-spsc-lockless-queue-benchmark/
