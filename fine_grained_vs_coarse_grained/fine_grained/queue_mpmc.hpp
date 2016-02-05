@@ -63,7 +63,7 @@ public:
             
             head_mutex.unlock();
             
-            free(current_head); // De allocate previous dummy node
+            delete current_head; // De allocate previous dummy node
             return true;
         }
 };
